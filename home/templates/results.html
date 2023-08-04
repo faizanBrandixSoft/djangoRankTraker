@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+<h1>Search Results</h1>
+{#{{ all_responses }}#}
+{% if all_responses %}
+    {% for response in all_responses %}
+        <div>
+            <h2>Keyword: {{ response.keyword }}</h2>
+            {% if response.pagination_urls %}
+                <h3>Pagination URLs:</h3>
+                <ul>
+                    {% for url in response.pagination_urls %}
+                        <li><a href="{{ url }}" target="_blank">{{ url }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No pagination URLs found for this keyword.</p>
+            {% endif %}
+
+            {% if response.placement is not None %}
+                <p>Target URL found at placement: {{ response.placement }}</p>
+            {% else %}
+                <p>Target URL not found in the first 15 pages.</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No results to display.</p>
+{% endif %}
+</body>
+</html>

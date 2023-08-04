@@ -1,0 +1,42 @@
+h1 {
+    color: DarkSlateGray;
+    font-size: 60px;
+    margin: 0 0 1rem;
+    line-height: 1;
+}
+
+h2 {
+    color: DimGray;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+h4 {
+    color: DimGray;
+    line-height: 1.25;
+    font-size: 2rem;
+    /*margin: 0 0 1rem;*/
+}
+
+label {
+    color: DimGray;
+}
+
+p {
+    color: DimGray;
+    margin: 0;
+    font-size: 14px;
+}
+
+.row {
+    margin: 0;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
